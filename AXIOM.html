@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AXIOM // Digital Architects</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <style>
+        :root {
+            --bg-color: #0a0a1a;
+            --text-primary: #f8fafc;
+            --text-secondary: #a1a1aa;
+            --panel-bg: rgba(10, 10, 26, 0.5);
+            --panel-border: rgba(255, 255, 255, 0.1);
+        }
+        html { scroll-behavior: smooth; }
+        body { font-family: 'Inter', sans-serif; background-color: var(--bg-color); color: var(--text-primary); }
+        #particle-canvas { position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: -1; }
+        
+        .panel {
+            background: var(--panel-bg);
+            border: 1px solid var(--panel-border);
+            backdrop-filter: blur(15px);
+            -webkit-backdrop-filter: blur(15px);
+            border-radius: 1.5rem;
+            padding: 3rem;
+        }
+
+        .primary-btn {
+            background: #fff; color: #000; font-weight: 600; border-radius: 9999px;
+            padding: 1rem 2.5rem; transition: all 0.3s ease;
+        }
+        .primary-btn:hover { transform: scale(1.05); box-shadow: 0 10px 30px rgba(255,255,255,0.1); }
+
+        .reveal { opacity: 0; transform: translateY(50px); transition: opacity 1s ease-out, transform 1s ease-out; }
+        .reveal.visible { opacity: 1; transform: translateY(0); }
+    </style>
+</head>
+<body class="antialiased">
+    <canvas id="particle-canvas"></canvas>
+
+    <header class="fixed w-full z-50 p-6">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            <h1 class="text-3xl font-bold tracking-wider text-white">AXIOM</h1>
+            <nav class="hidden md:flex items-center space-x-reverse space-x-8">
+                <a href="#solutions" class="text-lg text-slate-300 hover:text-white transition">حلولنا</a>
+                <a href="#process" class="text-lg text-slate-300 hover:text-white transition">منهجيتنا</a>
+                <a href="#contact" class="primary-btn text-sm !px-6 !py-2">ابدأ مشروعك</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container mx-auto px-6 relative z-10">
+        <section id="hero" class="min-h-screen flex items-center justify-center text-center">
+            <div class="max-w-4xl reveal">
+                <h2 class="text-6xl md:text-8xl font-bold text-white mb-6 leading-tight">
+                    نحن نصمم الأنظمة الرقمية الحية
+                </h2>
+                <p class="text-xl text-text-secondary max-w-2xl mx-auto mb-10">
+                   في AXIOM، نرى الكود كشكل من أشكال الفن. نحن نبني حلولًا برمجية ليست فقط وظيفية، بل هي أنظمة ديناميكية ومعقدة تتطور وتتكيف.
+                </p>
+                <a href="#solutions" class="primary-btn">اكتشف كيف نفعل ذلك</a>
+            </div>
+        </section>
+
+        <section id="solutions" class="py-24">
+            <div class="panel reveal">
+                <div class="text-center mb-16">
+                    <h2 class="text-5xl font-bold text-white">حلولنا الهندسية</h2>
+                    <p class="text-lg text-text-secondary mt-4">نقدم خدمات متكاملة لتحويل أعقد الأفكار إلى واقع رقمي ملموس.</p>
+                </div>
+                <div class="grid md:grid-cols-3 gap-8">
+                    <div>
+                        <div class="text-3xl mb-4"><i class="fas fa-cogs text-pink-400"></i></div>
+                        <h3 class="text-2xl font-bold text-white mb-2">الأنظمة المخصصة</h3>
+                        <p class="text-text-secondary">بناء أنظمة برمجية مصممة خصيصًا لتلبية احتياجات عملك بدقة وكفاءة.</p>
+                    </div>
+                    <div>
+                        <div class="text-3xl mb-4"><i class="fas fa-chart-pie text-sky-400"></i></div>
+                        <h3 class="text-2xl font-bold text-white mb-2">هندسة البيانات</h3>
+                        <p class="text-text-secondary">تحويل البيانات إلى أصول استراتيجية عبر أنظمة التحليل والتصوير المتقدمة.</p>
+                    </div>
+                    <div>
+                        <div class="text-3xl mb-4"><i class="fas fa-object-group text-purple-400"></i></div>
+                        <h3 class="text-2xl font-bold text-white mb-2">تصميم التجربة الرقمية</h3>
+                        <p class="text-text-secondary">صياغة واجهات وتجارب مستخدم بديهية وجذابة تضمن تفاعل وولاء جمهورك.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section id="process" class="py-24">
+             <div class="panel reveal">
+                <div class="text-center mb-16">
+                    <h2 class="text-5xl font-bold text-white">منهجيتنا</h2>
+                    <p class="text-lg text-text-secondary mt-4">عملية شفافة تضمن الدقة والجودة من الفكرة إلى الإطلاق.</p>
+                </div>
+                <div class="grid md:grid-cols-4 gap-4 text-center">
+                    <div><h3 class="text-2xl font-bold text-white mb-2">01. الاستكشاف</h3><p class="text-text-secondary">فهم عميق لأهدافك.</p></div>
+                    <div><h3 class="text-2xl font-bold text-white mb-2">02. التصميم</h3><p class="text-text-secondary">بناء المخططات والنماذج.</p></div>
+                    <div><h3 class="text-2xl font-bold text-white mb-2">03. التطوير</h3><p class="text-text-secondary">تحويل التصميم إلى كود حي.</p></div>
+                    <div><h3 class="text-2xl font-bold text-white mb-2">04. الإطلاق</h3><p class="text-text-secondary">النشر والدعم المستمر.</p></div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="py-24 max-w-4xl mx-auto">
+            <div class="panel reveal">
+                 <div class="text-center mb-12">
+                    <h2 class="text-5xl font-bold text-white">لنتحدث عن مشروعك القادم</h2>
+                    <p class="text-lg text-text-secondary mt-4">نحن هنا للمساعدة. تواصل معنا عبر القنوات التالية أو أرسل رسالة مباشرة.</p>
+                 </div>
+                 <div class="grid md:grid-cols-2 gap-8 items-center">
+                    <div class="space-y-6">
+                        <div class="flex items-center group">
+                           <div class="w-16 h-16 flex-shrink-0 flex items-center justify-center bg-white/5 rounded-lg mr-4"><i class="fas fa-map-marker-alt text-green-400 text-2xl"></i></div>
+                           <div>
+                                <h3 class="text-xl font-bold text-white">الموقع</h3>
+                                <p class="text-text-secondary">صنعاء، اليمن</p>
+                           </div>
+                        </div>
+                         <a href="mailto:naji02823@gmail.com" class="flex items-center group">
+                           <div class="w-16 h-16 flex-shrink-0 flex items-center justify-center bg-white/5 rounded-lg mr-4 group-hover:bg-white/10 transition"><i class="fas fa-envelope text-2xl text-sky-400"></i></div>
+                           <div>
+                                <h3 class="text-xl font-bold text-white">البريد الإلكتروني</h3>
+                                <p class="text-text-secondary group-hover:text-white transition">naji02823@gmail.com</p>
+                           </div>
+                        </a>
+                         <a href="https://www.instagram.com/v.uzzs" target="_blank" class="flex items-center group">
+                           <div class="w-16 h-16 flex-shrink-0 flex items-center justify-center bg-white/5 rounded-lg mr-4 group-hover:bg-white/10 transition"><i class="fab fa-instagram text-2xl text-purple-400"></i></div>
+                           <div>
+                                <h3 class="text-xl font-bold text-white">انستغرام</h3>
+                                <p class="text-text-secondary group-hover:text-white transition">@v.uzzs</p>
+                           </div>
+                        </a>
+                    </div>
+                    <div class="text-center">
+                        <a href="https://wa.me/967776564190?text=أهلاً%20AXIOM،%20أرغب%20في%20مناقشة%20مشروع%20جديد." target="_blank" class="primary-btn text-xl inline-block">
+                           <i class="fab fa-whatsapp ml-2"></i> تواصل عبر واتساب
+                        </a>
+                    </div>
+                 </div>
+            </div>
+        </section>
+        
+        <footer class="text-center py-8 mt-12 border-t border-panel-border">
+            <p class="text-text-secondary">&copy; 2025 AXIOM. صنعاء، اليمن. جميع الحقوق محفوظة.</p>
+        </footer>
+    </main>
+
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const canvas = document.getElementById('particle-canvas');
+        const ctx = canvas.getContext('2d');
+        let width = canvas.width = window.innerWidth;
+        let height = canvas.height = window.innerHeight;
+        let particles = [];
+        const mouse = { x: null, y: null, radius: 150 };
+
+        window.addEventListener('mousemove', e => { mouse.x = e.x; mouse.y = e.y; });
+        window.addEventListener('resize', () => { width = canvas.width = window.innerWidth; height = canvas.height = window.innerHeight; init(); });
+
+        class Particle {
+            constructor(x, y, directionX, directionY, size, color) {
+                this.x = x; this.y = y; this.directionX = directionX; this.directionY = directionY;
+                this.size = size; this.color = color; this.baseX = this.x; this.baseY = this.y;
+                this.density = (Math.random() * 30) + 1;
+            }
+            draw() {
+                ctx.beginPath();
+                ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2, false);
+                ctx.fillStyle = this.color;
+                ctx.fill();
+            }
+            update() {
+                let dx = mouse.x - this.x; let dy = mouse.y - this.y;
+                let distance = Math.sqrt(dx*dx + dy*dy);
+                let forceDirectionX = dx / distance; let forceDirectionY = dy / distance;
+                let maxDistance = mouse.radius;
+                let force = (maxDistance - distance) / maxDistance;
+                let directionX = forceDirectionX * force * this.density;
+                let directionY = forceDirectionY * force * this.density;
+
+                if(distance < mouse.radius) { this.x -= directionX; this.y -= directionY; }
+                else {
+                    if (this.x !== this.baseX) { let dx = this.x - this.baseX; this.x -= dx/10; }
+                    if (this.y !== this.baseY) { let dy = this.y - this.baseY; this.y -= dy/10; }
+                }
+                this.draw();
+            }
+        }
+
+        function init() {
+            particles = [];
+            const numberOfParticles = (width * height) / 9000;
+            for (let i = 0; i < numberOfParticles; i++) {
+                let size = (Math.random() * 2) + 1;
+                let x = (Math.random() * ((width - size * 2) - (size * 2)) + size * 2);
+                let y = (Math.random() * ((height - size * 2) - (size * 2)) + size * 2);
+                let directionX = (Math.random() * .2) - .1; let directionY = (Math.random() * .2) - .1;
+                let color = `hsl(${Math.random() * 360}, 70%, 60%)`;
+                particles.push(new Particle(x, y, directionX, directionY, size, color));
+            }
+        }
+
+        function connect() {
+            let opacityValue = 1;
+            for (let a = 0; a < particles.length; a++) {
+                for (let b = a; b < particles.length; b++) {
+                    let distance = ((particles[a].x - particles[b].x) * (particles[a].x - particles[b].x)) + ((particles[a].y - particles[b].y) * (particles[a].y - particles[b].y));
+                    if (distance < (width/7) * (height/7)) {
+                        opacityValue = 1 - (distance/20000);
+                        let dx = mouse.x - particles[a].x; let dy = mouse.y - particles[a].y;
+                        let mouseDistance = Math.sqrt(dx*dx + dy*dy);
+                        if (mouseDistance < mouse.radius) { ctx.strokeStyle = `rgba(255, 0, 255, ${opacityValue})`; }
+                        else { ctx.strokeStyle = `rgba(140, 85, 255, ${opacityValue})`; }
+                        ctx.lineWidth = 1;
+                        ctx.beginPath(); ctx.moveTo(particles[a].x, particles[a].y); ctx.lineTo(particles[b].x, particles[b].y); ctx.stroke();
+                    }
+                }
+            }
+        }
+
+        function animate() {
+            requestAnimationFrame(animate);
+            ctx.clearRect(0,0,width,height);
+            for (let i = 0; i < particles.length; i++) { particles[i].update(); }
+            connect();
+        }
+
+        init();
+        animate();
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.1 });
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+    });
+    </script>
+</body>
+</html>
